@@ -1,4 +1,5 @@
 name: Publish new release of resume
+
 on:
   push:
     tags:
