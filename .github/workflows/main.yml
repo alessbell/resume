@@ -10,16 +10,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      # - name: Compile LaTeX document
-      #   uses: xu-cheng/latex-action@master
-      #   with:
-      #     root_file: resume.tex
-      # - name: Release
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     files: resume.pdf
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: resume.tex
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: resume.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Pings repo
         uses: ./ping-repo
         env:
