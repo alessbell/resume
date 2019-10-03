@@ -1,9 +1,16 @@
-FROM debian:9.5-slim
+FROM alpine:latest
 
-LABEL "com.github.actions.name"="Hello World"
-LABEL "com.github.actions.description"="Write arguments to the standard output"
-LABEL "com.github.actions.icon"="mic"
-LABEL "com.github.actions.color"="purple"
+LABEL "com.github.actions.name"="Ping a different repository"
+LABEL "com.github.actions.description"="Send a ping via GitHub API"
+LABEL "com.github.actions.icon"="activity"
+LABEL "com.github.actions.color"="yellow"
+
+RUN apk add --no-cache \
+  bash \
+  ca-certificates \
+  coreutils \
+  curl \
+  jq
 
 LABEL "repository"="http://github.com/octocat/hello-world"
 LABEL "homepage"="http://github.com/actions"
