@@ -1,9 +1,8 @@
 name: Publish new release of resume
 on:
   push
-  # - master
-  # tags:
-  # - 'v*.*.*'
+    tags:
+    - 'v*.*.*'
 jobs:
   build:
     runs-on: ubuntu-latest
