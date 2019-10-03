@@ -23,4 +23,5 @@ jobs:
       - name: Pings repo
       - uses: ./ping-repo
           env:
-            GITHUB_TOKEN: thing
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_REPOSITORY: alessbell/alessbell
