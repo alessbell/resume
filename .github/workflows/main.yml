@@ -1,4 +1,4 @@
-name: A workflow for my Hello World file
+name: Publish new release of resume
 on:
   push
   # - master
@@ -20,3 +20,7 @@ jobs:
           files: resume.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pings repo
+      - uses: ./ping-repo
+          env:
+            GITHUB_TOKEN: thing
