@@ -5,12 +5,13 @@ LABEL "com.github.actions.description"="Send a ping via GitHub API"
 LABEL "com.github.actions.icon"="activity"
 LABEL "com.github.actions.color"="yellow"
 
-RUN apk add --no-cache \
+RUN apk --update add --no-cache \
   bash \
-  ca-certificates \
-  coreutils \
-  curl \
-  jq
+  nodejs \
+  nodejs-npm \
+  git \
+  openssh \
+  curl
 
 LABEL "repository"="http://github.com/octocat/hello-world"
 LABEL "homepage"="http://github.com/actions"

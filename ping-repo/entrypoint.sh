@@ -13,28 +13,19 @@ if [[ -z "$GITHUB_REPOSITORY" ]]; then
 fi
 
 URI=https://api.github.com
-API_VERSION=v3
-PREVIEW_VERSION=everest
-API_HEADER="Accept: application/vnd.github.${API_VERSION}+json; application/vnd.github.${PREVIEW_VERSION}-preview+json"
+API_HEADER="Accept: application/vnd.github.everest-preview+json"
 AUTH_HEADER="Authorization: token ${GITHUB_TOKEN}"
 
 main() {
-	# Validate the GitHub token.
-	curl -o /dev/null -sSL -H "${AUTH_HEADER}" -H "${API_HEADER}" "${URI}/repos/${GITHUB_REPOSITORY}" || { echo "Error: Invalid repo, token or network issue!";  exit 1; }
+  echo 'in entrypoint.sh'
+  echo 'Node version:' $(node -v)
+  echo 'NPM version:' $(npm -v)
+  echo 'Git version:' $(git --version)
+  echo 'output of pwd:' && pwd
+  echo 'output of ls:' && ls
+  echo 'these are arguments set to the workflow' && echo ${*}
 
-  # Ping repo
-  curl -o /dev/null -sSL -X POST -H "${AUTH_HEADER}" -H "${API_HEADER}" "${URI}/repos/${GITHUB_REPOSITORY}/dispatches" || { echo "Error: cannot ping repo!";  exit 1; }
-
-	# # Get the check run action.
-	# action=$(jq --raw-output .action "$GITHUB_EVENT_PATH")
-
-	# # If it's not synchronize or opened event return early.
-	# if [[ "$action" != "synchronize" ]] && [[ "$action" != "opened" ]]; then
-	# 	# Return early we only care about synchronize or opened.
-	# 	echo "Check run has action: $action"
-	# 	echo "Want: synchronize or opened"
-	# 	exit 0
-	# fi
+  curl -X POST -H "${AUTH_HEADER}" -H "${API_HEADER}" --data '{"event_type": "my_custom_webhook"}' "${URI}/repos/${GITHUB_REPOSITORY}/dispatches" || { echo "Error: cannot ping repo!";  exit 1; }
 }
 
 main
