@@ -17,15 +17,19 @@ API_HEADER="Accept: application/vnd.github.everest-preview+json"
 AUTH_HEADER="Authorization: token ${GITHUB_TOKEN}"
 
 main() {
-  echo 'in entrypoint.sh'
-  echo 'Node version:' $(node -v)
-  echo 'NPM version:' $(npm -v)
-  echo 'Git version:' $(git --version)
-  echo 'output of pwd:' && pwd
-  echo 'output of ls:' && ls
-  echo 'these are arguments set to the workflow' && echo ${*}
+  # echo 'in entrypoint.sh'
+  # echo 'Node version:' $(node -v)
+  # echo 'NPM version:' $(npm -v)
+  # echo 'Git version:' $(git --version)
+  # echo 'output of pwd:' && pwd
+  # echo 'output of ls:' && ls
+  # echo 'these are arguments set to the workflow' && echo ${*}
 
-  curl -X POST -H "${AUTH_HEADER}" -H "${API_HEADER}" --data '{"event_type": "my_custom_webhook"}' "${URI}/repos/${GITHUB_REPOSITORY}/dispatches" || { echo "Error: cannot ping repo!";  exit 1; }
+  # curl -X POST -H "${AUTH_HEADER}" -H "${API_HEADER}" --data '{"event_type": "my_custom_webhook"}' "${URI}/repos/${GITHUB_REPOSITORY}/dispatches" || { echo "Error: cannot ping repo!";  exit 1; }
+  curl -X POST  "${URI}/repos/${GITHUB_REPOSITORY}/dispatches" \
+  -H 'Accept: application/vnd.github.everest-preview+json' \
+  -H "Authorization: token ${GITHUB_TOKEN}" \
+  --data '{"event_type": "my_custom_webhook"}'
 }
 
 main
