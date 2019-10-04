@@ -25,4 +25,4 @@ jobs:
         uses: ./ping-repo
         env:
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
-          GITHUB_REPOSITORY: alessbell/alessbell
+          REPO: alessbell/alessbell

@@ -9,12 +9,13 @@ main() {
   # echo 'output of ls:' && ls
   # echo 'these are arguments set to the workflow' && echo ${*}
   echo 'token' ${GITHUB_TOKEN}
-  echo 'repo' ${GITHUB_REPOSITORY}
+  echo 'github repo' ${GITHUB_REPOSITORY}
+  echo 'repo' ${REPO}
 
   curl -XPOST -H "Accept: application/vnd.github.everest-preview+json" \
   -H "Content-Type: application/json" \
   -H "Authorization: token ${GITHUB_TOKEN}" \
-  "https://api.github.com/repos/${GITHUB_REPOSITORY}/dispatches" \
+  "https://api.github.com/repos/${REPO}/dispatches" \
   --data '{"event_type": "my_custom_webhook"}'
 }
 
