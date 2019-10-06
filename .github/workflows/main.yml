@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@master
+        uses: xu-cheng/latex-action@1.0.5
         with:
           root_file: resume.tex
       - name: Release
