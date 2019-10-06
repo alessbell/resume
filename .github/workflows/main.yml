@@ -1,8 +1,8 @@
 name: Publish new release of resume
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*.*.*'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,19 +11,16 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         uses: actions/checkout@master
       - name: Compile LaTeX document
-        if: startsWith(github.ref, 'refs/tags/')
         uses: xu-cheng/latex-action@master
         with:
           root_file: resume.tex
       - name: Release
-        if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
           files: resume.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Pings repo
-        if: startsWith(github.ref, 'refs/tags/')
         uses: ./ping-repo
         env:
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
