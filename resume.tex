@@ -5,7 +5,7 @@
 %------------------------
 
 \documentclass[letterpaper,10.8pt]{article}
-
+\usepackage{tabularx}
 \usepackage{latexsym}
 \usepackage{geometry}
 \usepackage[english]{babel}
@@ -35,7 +35,7 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot[C]{
-    The \LaTeX source for this resumé can be found at \href{https://github.com/alessbell/resume}{github.com/alessbell/resume}
+    The \LaTeX{} source for this resumé can be found at \href{https://github.com/alessbell/resume}{github.com/alessbell/resume}
 }
 
 % Sections formatting
@@ -81,7 +81,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Alessia Bellisario}} & Email: \href{mailto:alessia@bellisar.io}{alessia@bellisar.io}\\
+  \textbf{{\LARGE Alessia Bellisario}} & Email: \href{alessia@bellisar.io}{alessia@bellisar.io}\\
   \href{https://www.linkedin.com/in/alessiabellisario/}{LinkedIn: https://www.linkedin.com/in/alessiabellisario} & Mobile: +1-917-216-3426 \\
   \href{https://github.com/alessbell}{GitHub: https://github.com/alessbell} & \href{https://aless.co}{Website: https://aless.co} \\
 \end{tabular*}
@@ -98,25 +98,25 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-    {Breather}{New York, NY}
-    {Senior Front End Engineer }{April 2017 - Current}
+        {Breather}{New York, NY}
+        {Senior Front End Engineer }{April 2017 - Current}
     \resumeItemListStart
-        \resumeItem{Progressive Web App for Landlords}
-        {Relocated to Breather’s New York office as the first engineer outside of Montréal. Architected and developed Onsite, a PWA made with Preact and Flow, for landlords and building managers who access the app via provided Android tablet. Onsite features security and financial reporting and integrates with building access systems used in Class A office towers in Manhattan.}
         \resumeItem{Tools for Offices}
         {Built extensive suite of user-facing and internal tools for creating, managing and invoicing long-term office bookings. Used to book and invoice millions of dollars of commercial real estate across North America and Europe.}
+        \resumeItem{Progressive Web App for Landlords}
+        {Relocated to Breather’s New York office as the first engineer outside of Montréal. Architected and developed Onsite, a PWA made with Preact and Flow, for landlords and building managers who access the app via provided Android tablet. Onsite features security and financial reporting and integrates with building access systems used in Class A office towers in Manhattan.}
         \resumeItem{Refactor Component Library}
-          {Refactored Breather’s React UI library while optimizing Onsite in order to ship per-component modules. Resulted in a 36\%-72\% reduction in bundle sizes across three web apps.}
+        {Refactored Breather’s React UI library while optimizing Onsite in order to ship per-component modules. Resulted in a 36\%-72\% reduction in bundle sizes across three web apps.}
       \resumeItemListEnd
 
     \resumeSubheading
         {Breather}{Montréal, Canada}
-		{Full Stack Engineer }{January 2015 - March 2017}
+		    {Full Stack Engineer }{January 2015 - March 2017}
 		\resumeItemListStart
         \resumeItem{Overhaul Access Controls}
-          {Developed a series of user-facing interfaces for managing critical door code information, and built user flows for inviting meeting attendees via email or magic link.}
+        {Developed new interfaces for managing critical door code information and built user flows for inviting meeting attendees via email or magic link.}
         \resumeItem{Modernize Breather.com}
-          {Led a progressive rewrite of Breather.com from Backbone to modern React/Redux.}
+        {Led a progressive rewrite of Breather.com from Backbone to modern React/Redux.}
 		\resumeItemListEnd
 
     \resumeSubheading
@@ -124,7 +124,7 @@
 		{Junior Full Stack Engineer }{October 2014 - December 2014}
 		\resumeItemListStart
         \resumeItem{Python \& Django}
-          {Developed web applications using Python and Django for a full service digital marketing agency working in a TDD environment.}
+        {Developed web applications using Python and Django for a full service digital marketing agency working in a TDD environment.}
 		\resumeItemListEnd
 
     \resumeSubheading
@@ -132,7 +132,7 @@
 		{Junior Full Stack Engineer}{August 2014 - October 2014}
 		\resumeItemListStart
         \resumeItem{Angular, Ruby on Rails}
-          {Built end-to-end features with Ruby on Rails and Angular for a marketplace that connects brands with social media influencers, facilitates transactions and provides analytics.}
+        {Built end-to-end features with Ruby on Rails and Angular for a marketplace that connects brands with social media influencers, facilitates transactions and provides analytics.}
 		\resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -160,14 +160,14 @@
 %-----------Awards-----------------
 \section{Honors and Awards}
 \begin{description}[font=$\bullet$]
-\item {\textbf{Above and Beyond} award for exemplifying Breather’s engineering values of contribution and ambition. (May '17)}
+\item {\textbf{Above and Beyond} award for exemplifying Breather’s values of contribution and ambition. (May '17)}
 \vspace{-2px}
 \end{description}
 
 %-----------Presentations----------
 \section{Presentations}
 \begin{description}[font=$\bullet$]
-\item {\href{https://www.youtube.com/watch?v=6EHbfAmA_0c}{"From Bitmaker to Breather: A QuickStart™ Guide to Making Things on the Internet"} — Google Women Techmakers Montreal (April '16)}
+\item {\href{https://www.youtube.com/watch?v=6EHbfAmA_0c}{“From Bitmaker to Breather: A QuickStart™ Guide to Making Things on the Internet”} — Google Women Techmakers Montreal (April '16)}
 \end{description}
 
 %-------------------------------------------
