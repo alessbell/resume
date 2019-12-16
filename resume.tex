@@ -65,11 +65,40 @@
     \end{tabular*}\vspace{-4pt}
 }
 
+\newcommand{\education}[4]{
+  \vspace{0pt}\item[]
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\jobLineItem}[2]{
+  \vspace{0pt}\item[]
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSmallSubheadingBreather}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\employerTitle}[3]{
+  \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+    \href{#1}{\textbf{#2}} & \textbf{#3} \\
+  \end{tabular*}\vspace{-4pt}
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\educationStart}{\begin{itemize}[leftmargin=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -81,93 +110,103 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Alessia Bellisario}} & Email: \href{alessia@bellisar.io}{alessia@bellisar.io}\\
-  \href{https://www.linkedin.com/in/alessiabellisario/}{LinkedIn: https://www.linkedin.com/in/alessiabellisario} & Mobile: +1-917-216-3426 \\
-  \href{https://github.com/alessbell}{GitHub: https://github.com/alessbell} & \href{https://aless.co}{Website: https://aless.co} \\
+  \textbf{{\LARGE Alessia Bellisario}}\\
+  \texttt{\href{mailto:alessia@bellisar.io}{alessia@bellisar.io}} · \texttt{\href{https://aless.co}{http://aless.co}} & \href{https://www.linkedin.com/in/alessiabellisario/}{LinkedIn}  ·  \href{https://github.com/alessbell}{GitHub}\\
+  Full Stack Web Engineer & New York or Remote\\
 \end{tabular*}
 
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Specialties}{ESNext JavaScript (React, Node), TypeScript, GraphQL, Webpack, React Testing Library, Jest}
-    \resumeSubItem{Other tools and languages}{Rust, WebAssembly, Service Workers, MongoDB}
-    \vspace{5px}
+	\resumeSubItem{Specialties}{ESNext JavaScript, React, Node, TypeScript, GraphQL, Webpack, React Testing Library, Jest}
+  \resumeSubItem{Other tools and languages}{Gatsby, Preact, MongoDB, DangerJS, Contentful and other headless CMS}
+  \vspace{5px}
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
+  \employerTitle
+    {https://breather.com}{Breather}{January 2015 - Current}
   \resumeSubHeadingListStart
-    \resumeSubheading
-        {Breather}{New York, NY}
-        {Senior Front End Engineer }{April 2017 - Current}
+    \jobLineItem
+        {Senior Front End Engineer (New York, NY)}{January 2019 - Current}
     \resumeItemListStart
         \resumeItem{Tools for Offices}
-        {Built extensive suite of user-facing and internal tools for creating, managing and invoicing long-term office bookings. Used to book and invoice millions of dollars of commercial real estate across North America and Europe.}
+        {Led the development of an extensive suite of user-facing and internal tools for creating, managing and invoicing long-term office bookings used to book and invoice tens of millions of dollars of commercial real estate across North America and London, UK.}
+        \resumeItem{Developer Velocity}
+        {Led the Best Practices Guild in the adoption of a number of tools and processes to improve developer collaboration, including Prettier and DangerJS, and led the team in designing a Request For Comments (RFC) process. Developed an autodeploy process and rolled it out to the entire engineering team.}
+    \resumeItemListEnd
+    \jobLineItem
+        {Front End Engineer (New York, NY)}{April 2017 - December 2018}
+    \resumeItemListStart
         \resumeItem{Progressive Web App for Landlords}
-        {Relocated to Breather’s New York office as the first engineer outside of Montréal. Architected and developed Onsite, a PWA made with Preact and Flow, for landlords and building managers who access the app via provided Android tablet. Onsite features security and financial reporting and integrates with building access systems used in Class A office towers in Manhattan.}
-        \resumeItem{Refactor Component Library}
-        {Refactored Breather’s React UI library while optimizing Onsite in order to ship per-component modules. Resulted in a 36\%-72\% reduction in bundle sizes across three web apps.}
+        {Relocated to Breather’s New York office as the first engineer outside of Montréal. Architected and developed \textit{Onsite}, a PWA made with Preact and Flow, for landlords and building managers who access the app via provided Android tablet. Onsite features security and financial reporting and integrates with building access systems used in Class A office towers in Manhattan.}
+        \resumeItem{Component Library}
+        {Refactored dozens of components in a shared React UI library while optimizing Onsite in order to ship per-component modules. Resulted in a 36\%-72\% reduction in bundle sizes across three web apps.}
       \resumeItemListEnd
-
-    \resumeSubheading
-        {Breather}{Montréal, Canada}
-		    {Full Stack Engineer }{January 2015 - March 2017}
+    \jobLineItem
+		    {Full Stack Engineer (Montréal, Canada)}{January 2015 - March 2017}
 		\resumeItemListStart
         \resumeItem{Overhaul Access Controls}
-        {Developed new interfaces for managing critical door code information and built user flows for inviting meeting attendees via email or magic link.}
+        {Built interfaces for managing critical door code information and inviting meeting attendees via email or magic link. Developed a tool for generating transactional email templates.}
         \resumeItem{Modernize Breather.com}
         {Led a progressive rewrite of Breather.com from Backbone to modern React/Redux.}
-		\resumeItemListEnd
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-    \resumeSubheading
-        {Gale Partners}{Toronto, Canada}
-		{Junior Full Stack Engineer }{October 2014 - December 2014}
+  \employerTitle
+  {https://gale.agency}{Gale Partners}{October 2014 - December 2014}
+  \resumeSubHeadingListStart
+  \jobLineItem
+		{Jr. Full Stack Engineer (Toronto, Canada)}{}
 		\resumeItemListStart
-        \resumeItem{Python \& Django}
-        {Developed web applications using Python and Django for a full service digital marketing agency working in a TDD environment.}
-		\resumeItemListEnd
+      \resumeItem{Python \& Django}
+        {Developed web applications for the clients of a full service digital marketing agency.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-    \resumeSubheading
-        {\#paid}{Toronto, Canada}
-		{Junior Full Stack Engineer}{August 2014 - October 2014}
+    \employerTitle
+  {https://hashtagpaid.com}{\#paid}{August 2014 - October 2014}
+  \resumeSubHeadingListStart
+  \jobLineItem
+		{Jr. Full Stack Engineer (Toronto, Canada)}{}
 		\resumeItemListStart
-        \resumeItem{Angular, Ruby on Rails}
-        {Built end-to-end features with Ruby on Rails and Angular for a marketplace that connects brands with social media influencers, facilitates transactions and provides analytics.}
-		\resumeItemListEnd
-
-\resumeSubHeadingListEnd
+      \resumeItem{Angular, Ruby on Rails}
+        {Built end-to-end features for a digital marketplace with Ruby on Rails and Angular.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
 \resumeSubHeadingListStart
-\resumeSubItem{\href{https://github.com/alessbell/lines}{Recurse Center: Lines}}{Member of the mini 3 '19 Recurse Center batch. Built a web app using Rust, Wasm and Glitch for creating generative art. (April '19)}
-\resumeSubItem{\href{https://github.com/alessbell/wave-tic-tac-toe}{Minimax Tic Tac Toe}}{A tic tac toe game in which a human faces off against an unbeatable computer. Built with Node and Express, the game is played via querystring. (January '19)}
+\resumeSubItem{\href{https://github.com/alessbell/lines}{Recurse Center: Lines}}{Attended the mini 3 '19 \href{https://recurse.com}{\textbf{Recurse Center}} batch. Built a web app using Rust and WebAssembly for creating generative art. (April 2019)}
+\resumeSubItem{\href{https://github.com/alessbell/wave-tic-tac-toe}{Minimax Tic Tac Toe}}{A tic tac toe game in which a human faces off against an unbeatable computer. Built with Node and Express, the game is played via querystring. (January 2019)}
 \vspace{5px}
 \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bitmaker Labs}{Toronto, Canada}
-      {JavaScript and Ruby on Rails Bootcamp}{June 2014 - August 2014}
-    \resumeSubheading
-      {University of Toronto, Trinity College}{Toronto, Canada}
-      {Honours Bachelor of Arts; Ethics, Society and Law}{September 2009 - June 2014}
+  \educationStart
+    \education
+      {Bitmaker Labs (Now \textit{Bitmaker General Assembly})}{June 2014 - August 2014}
+      {JavaScript and Ruby on Rails Bootcamp}{Toronto, Canada}
+    \education
+      {University of Toronto, Trinity College}{September 2009 - June 2014}
+      {Honours Bachelor of Arts; Ethics, Society and Law}{Toronto, Canada}
     \vspace{-4px}
   \resumeSubHeadingListEnd
 
 %-----------Awards-----------------
 \section{Honors and Awards}
-\begin{description}[font=$\bullet$]
-\item {\textbf{Above and Beyond} award for exemplifying Breather’s values of contribution and ambition. (May '17)}
+\begin{description}
+\item[] {\textbf{Above and Beyond} award for exemplifying Breather’s values of contribution and ambition (May 2017)}
 \vspace{-2px}
 \end{description}
 
 %-----------Presentations----------
 \section{Presentations}
-\begin{description}[font=$\bullet$]
-\item {\href{https://www.youtube.com/watch?v=6EHbfAmA_0c}{“From Bitmaker to Breather: A QuickStart™ Guide to Making Things on the Internet”} — Google Women Techmakers Montreal (April '16)}
+\begin{description}
+\item[] {\href{https://www.youtube.com/watch?v=6EHbfAmA_0c}{“A QuickStart™ Guide to Making Things on the Internet”} - Google Women Techmakers Montreal (April 2016)}
 \end{description}
 
 %-------------------------------------------
