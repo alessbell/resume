@@ -118,21 +118,34 @@
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Specialties}{ESNext JavaScript, TypeScript, React, Web Accessibility (a11y), Node.js, Next.js, GraphQL, Webpack}
-  \resumeSubItem{More Tools and Languages}{Tailwind CSS, Testing Library, Jest, MongoDB, Danger JS}
+	\resumeSubItem{Specialties}{ESNext JavaScript, TypeScript, React, Web Accessibility (a11y), GraphQL and Apollo Client}
+  % \resumeSubItem{More Tools and Languages}{Tailwind CSS, Testing Library, Jest, MongoDB, Danger JS}
   \vspace{5px}
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \employerTitle
-    {https://venmo.com}{Venmo (PayPal)}{May 2020 - Present}
+    {https://apollographql.com}{Apollo Graph Inc.}{June 2022 - Present}
+  \resumeSubHeadingListStart
+    \jobLineItem
+      {Staff Software Engineer, Core Maintainer of Apollo Client (Full-time, Remote)}{}
+      \resumeItemListStart
+        \resumeItem{@defer support}{Shipped support for the proposed GraphQL directive @defer, the first Apollo Client feature that required support for multipart transport over HTTP, in my first three months.}
+        \resumeItem{Contribute features and fixes to a large OSS project}{Shipped additional features including a new data fetching hook integrated with React Suspense, useBackgroundQuery, and numerous bug fixes in a library downloaded 2.8MM+ times per week.}
+        \resumeItem{Increase release cadence}{Wrote an RFC, got buy-in from stakeholders and automated several workflows for releasing Apollo Client. The project saw a 75\% increase in releases in Q1 '23 compared to the previous year.}
+        \resumeItem{Represent Apollo in developer communities}{Represent Apollo on the GraphQL Foundation's Incremental Delivery WG, as a TC39 Member and speaker at numerous conferences in the React and GraphQL communities.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  \employerTitle
+    {https://venmo.com}{Venmo (PayPal)}{May 2020 - May 2022}
   \resumeSubHeadingListStart
     \jobLineItem
       {Staff Software Engineer - Member of Technical Staff, 1 (Full-time, New York, NY)}{}
       \resumeItemListStart
-        \resumeItem{Rewriting Venmo's Web Application}{One of two web leads working with a team of thirteen engineers in migrating the consumer web application to Next.js from two legacy codebases, including all webviews used for core flows in the mobile clients with millions of pageviews per month. Enabled new features on web including payments, business profile creation and instant transfers. Web MAUs grew by over 400\% from Dec. 2020 to Dec. 2021.}
-        \resumeItem{WCAG AA Compliance}{Led the team's a11y pillar by conducting lunch and learns on best practices, providing training resources on screen reader use and leveraging axe for partial automation across web and email codebases.}
+        \resumeItem{Rewriting Venmo's Web Application}{One of two web leads working with a team of thirteen engineers in migrating the consumer web application to Next.js from two legacy codebases, including all webviews used for core flows in the mobile clients with millions of pageviews per month. Got buy-in to build previously mobile-only features on web including P2P payments, business profile creation and instant transfers. Web MAUs grew by over 400\% from Dec. 2020 to Dec. 2021.}
+        \resumeItem{Web a11y and i18n}{Led the team's web accessibility pillar as part of a PayPal-wide initiative by conducting trainings and leveraging axe for automated testing. Also led i18n efforts, making internationalization a foundational part of our web architecture and team culture.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
   \employerTitle
@@ -141,7 +154,7 @@
     \jobLineItem
       {Senior Software Engineer (Contract, Remote)}{}
       \resumeItemListStart
-        \resumeItem{SESAME Project}{Developed a science-based web application (“Sustainable Energy System Analysis Modelling Environment") which analyzes the environmental and economic impact of low carbon energy technology systems. Built with Gatsby, Tailwind CSS and AWS cloud services, including CodeBuild triggers for ingesting large datasets.}
+        \resumeItem{SESAME Project}{Developed a patented science-based web application (“Sustainable Energy System Analysis Modelling Environment") which analyzes the environmental and economic impact of low carbon energy technology systems. Built with Gatsby, Tailwind CSS and AWS CodeBuild triggers for ingesting large datasets.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -153,24 +166,15 @@
     \resumeItemListStart
         \resumeItem{Tools for Office Customers}
         {Led the development of an extensive suite of internal tools for managing, accessing and invoicing long-term office bookings, generating tens of millions of dollars in revenue across North America and London, UK in its first year.}
-        \resumeItem{Led the Team to Adopt Best Practices}
-        {Led the Best Practices Guild in the adoption of tools and processes to improve developer collaboration and in designing a Request For Comments (RFC) process. Developed a CI/CD process and rolled it out to the entire 20 person engineering team.}
     \resumeItemListEnd
     \jobLineItem
-        {Front End Engineer (Full-time, New York, NY)}{April 2017 - December 2018}
-    \resumeItemListStart
-        \resumeItem{Progressive Web App for Landlords}
-        {Architected and developed \textit{Onsite} as Breather’s first engineer in the U.S. and leader of the Real Estate Innovations pod. \textit{Onsite} is a PWA made with Preact and Flow, features security and financial reporting and integrates with building access systems used in Class A office towers in Manhattan.}
-      \resumeItemListEnd
-    \jobLineItem
-		    {Full Stack Engineer (Full-time, Montréal, Canada)}{January 2015 - March 2017}
+        {Front End Engineer (Full-time, Montréal, Canada and New York, NY)}{January 2015 - December 2018}
     \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
 \resumeSubHeadingListStart
-\resumeSubItem{\href{https://github.com/alessbell/lines}{Recurse Center}}{Attended the mini 3 batch in April 2019. Built a web app using Rust and WebAssembly that draws happy faces that follow the user's cursor using wasm-bindgen to do direct DOM manipulation from Rust. (2019)}
-\resumeSubItem{\href{https://aless.co/gatsby-wasm-plugin/}{gatsby-remark-twitter-cards}}{Built a Gatsby plugin with Rust and WebAssembly that generates Open Graph social card images at build time. It supports vector fonts and handles text layout without native dependencies. (2019)}
+\resumeSubItem{\href{https://github.com/alessbell/lines}{Recurse Center}}{Attended the mini 3 batch in April 2019. Built a web app using Rust and WebAssembly that allows the user to draw in the browser using wasm-bindgen to do direct DOM manipulation from Rust. (2019)}
 \vspace{5px}
 \resumeSubHeadingListEnd
 
@@ -182,10 +186,11 @@
 % \end{description}
 
 %-----------Presentations----------
-\section{Presentations}
+\section{Talks}
 \begin{description}
-\item[] {\href{https://youtu.be/tq9MfIG-VXw?t=14526}{“Next i18n: Performant, Rich Translations in Next.js”} - JS@PayPal Worldwide Virtual Conference (2021)}
-\item[] {\href{https://www.youtube.com/watch?v=6EHbfAmA_0c}{“A QuickStart™ Guide to Making Things on the Internet”} - Google Women Techmakers Montreal (2016)}
+\item[] {\href{https://www.youtube.com/watch?v=n4mcAm4ukLU}{“Query Now, Render Later: Leveraging @defer for Efficient Data Delivery" - GraphQL Summit (2023)}}
+\item[] {\href{https://portal.gitnation.org/contents/how-to-use-suspense-and-graphql-with-apollo-to-build-great-user-experiences}{“How to Use Suspense and GraphQL to Build Great User Experiences" - React Advanced London (2023)}}
+% \item[] {\href{https://youtu.be/tq9MfIG-VXw?t=14526}{“Next i18n: Performant, Rich Translations in Next.js" - JS@PayPal Worldwide Virtual Conference (2021)}}
 \end{description}
 
 %-----------EDUCATION-----------------
