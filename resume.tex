@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in LaTeX
-% Author : Kyle O'Brien
+% Author : Aless Bell, Kyle O'Brien
 % License : MIT
 %------------------------
 
@@ -15,6 +15,9 @@
 \usepackage{enumitem}
 \usepackage[pdftex,hidelinks=true]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage{FiraMono} % For monospaced font (coding sections)
+\usepackage{fontawesome}
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -65,14 +68,6 @@
     \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\education}[4]{
-  \vspace{0pt}\item[]
-    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-4pt}
-}
-
 \newcommand{\jobLineItem}[2]{
   \vspace{0pt}\item[]
     \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
@@ -98,7 +93,6 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\educationStart}{\begin{itemize}[leftmargin=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -111,7 +105,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Kyle O'Brien}}\\
-  \texttt{\href{mailto:kyle@kyleo.io}{kyle@kyleo.io}} · \texttt{\href{https://kyleo.io}{https://kyleo.io}} & \href{https://www.linkedin.com/in/0kyle/}{LinkedIn}  ·  \href{https://github.com/obrien-k}{GitHub}\\
+  \href{mailto:kyle@kyleo.io}{\faEnvelope \texttt{ kyle@kyleo.io}} \quad \href{https://kyleo.io}{\faGlobe \texttt{ kyleo.io}} \quad \href{https://www.linkedin.com/in/0kyle/}{\faLinkedin} \quad \href{https://github.com/obrien-k}{\faGithub}\\
   Full Stack Web Developer & Texas or Remote\\
 \end{tabular*}
 
