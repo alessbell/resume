@@ -1,19 +1,23 @@
-# resume!
+# KO Resume
 
-Inspired by [`dcousineau/resume`](https://github.com/dcousineau/resume) -- especially the clever strategy of using `releases` as an archive of various "built" states over time.
+Inspired by [`alessbell/resume`](https://github.com/alessbell/resume)
 
-If you're on a mac, `brew cask install mactex && pdflatex resume.tex`
+If you're on a mac, `brew install --cask mactex && pdflatex resume.tex`
 
-# automated releases
+## Single source of truth
 
-As of October 2019, I've automated the process for generating GitHub releases of new versions of my resume.
+`resume.tex` is the origin. The website's downloadable JSON + vCard **and** the
+rendered page's data (`_data/resume.yml`) are all **generated** from it so they
+can't silently drift:
 
-First, I compile a new `resume.pdf` using this excellent [LaTeX Action](https://github.com/xu-cheng/latex-action) which uses `pdfLaTeX` under the hood. Then I use the [GH Release action](https://github.com/marketplace/actions/gh-release) to upload the newly-generated `resume.pdf` as a release asset. 🎉
+```sh
+python3 scripts/tex2resume.py resume.tex \
+  --json ../obrien-k.github.io/assets/resume.json \
+  --vcf  ../obrien-k.github.io/assets/resume.vcf \
+  --yaml ../obrien-k.github.io/_data/resume.yml
+```
 
-Finally, I kick off a GitHub Action in my blog's repo, [`alessbell/aless.co`](https://github.com/alessbell/aless.co), and open a PR with the PDF release asset from the latest release. I've written more about how I've automated this flow [here](https://aless.co/resume-as-code/).
-
-# steps to publish
-
-1. Cut a branch, make some changes and add a new commit. Then run e.g. `git tag -a v1.4 -m "Release v1.4, adds new job"` and create a PR.
-
-2. Push local tags up with `git push origin --tags`. This will kick off the GitHub action. After it succeeds, merge the pull request.⚡️
+After editing `resume.tex`: rebuild the PDF (`pdflatex resume.tex`, or push a
+`v*.*` tag for the CI release), run the command above, and commit the refreshed
+`resume.pdf` / `resume.json` / `resume.vcf` into the site repo. The generator is
+idempotent — re-running on an unchanged `.tex` produces no diff.

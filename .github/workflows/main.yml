@@ -19,8 +19,3 @@ jobs:
           files: resume.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Pings repo
-        uses: ./ping-repo
-        env:
-          GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
-          REPO: alessbell/aless.co

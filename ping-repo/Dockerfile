@@ -9,9 +9,9 @@ RUN apk --update add --no-cache \
   bash \
   curl
 
-LABEL "repository"="http://github.com/alessbell/resume"
+LABEL "repository"="http://github.com/obrien-k/resume"
 LABEL "homepage"="http://github.com/actions"
-LABEL "maintainer"="Alessia Bellisario <github@bellisar.io>"
+LABEL "maintainer"="Kyle O'Brien <github@korin.codes>"
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

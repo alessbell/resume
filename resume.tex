@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in LaTeX
-% Author : Alessia Bellisario
+% Author : Aless Bell, Kyle O'Brien
 % License : MIT
 %------------------------
 
@@ -15,16 +15,17 @@
 \usepackage{enumitem}
 \usepackage[pdftex,hidelinks=true]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{fontawesome5}
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.25in}
-\addtolength{\evensidemargin}{-0.25in}
-\addtolength{\topmargin}{-0.35in}
-\addtolength{\textwidth}{0.5in}
-\addtolength{\textheight}{1in}
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textwidth}{0.75in}
+\addtolength{\textheight}{1.25in}
 
 \urlstyle{rm}
 
@@ -35,7 +36,7 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot[C]{
-    The \LaTeX{} source for this resumé can be found at \href{https://github.com/alessbell/resume}{github.com/alessbell/resume}
+    The \LaTeX{} source for this resumé can be found at \href{https://github.com/obrien-k/resume}{github.com/obrien-k/resume}
 }
 
 % Sections formatting
@@ -80,13 +81,6 @@
     \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\resumeSmallSubheadingBreather}[2]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-4pt}
-}
-
 \newcommand{\employerTitle}[3]{
   \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
     \href{#1}{\textbf{#2}} & \textbf{#3} \\
@@ -110,97 +104,122 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Alessia Bellisario}}\\
-  \texttt{\href{mailto:alessia@bellisar.io}{alessia@bellisar.io}} · \texttt{\href{https://aless.co}{https://aless.co}} & \href{https://www.linkedin.com/in/alessiabellisario/}{LinkedIn}  ·  \href{https://github.com/alessbell}{GitHub}\\
-  Full Stack Web Engineer & New York or Remote\\
+  \textbf{\texttt{\LARGE Kyle O'Brien (Kai)}}\\
+  \href{mailto:obrienk@webbhost.net}{\faEnvelope \texttt{ obrienk@webbhost.net}} \quad \href{https://www.linkedin.com/in/0kyle/}{\faLinkedin} \quad \href{https://github.com/obrien-k}{\faGithub} \quad \href{https://kyleobrien.me}{\faGlobe}\\
+  Full Stack Engineer & Texas or Remote\\
 \end{tabular*}
 
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Specialties}{ESNext JavaScript, TypeScript, React, Web Accessibility (a11y), Node.js, Next.js, GraphQL, Webpack}
-  \resumeSubItem{More Tools and Languages}{Tailwind CSS, Testing Library, Jest, MongoDB, Danger JS}
+	\resumeSubItem{Writing and Docs}{Technical Writing, Markdown, OpenAPI, Git/PR Workflows}
+  \resumeSubItem{Languages}{TypeScript, Python, JavaScript, Node.js, GraphQL, React, Vue.js}
+  \resumeSubItem{Tools and Platforms}{Claude Code, CI/CD, Google Cloud, MongoDB, MSSQL Server, ZenDesk, Algolia}
   \vspace{5px}
 \resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \employerTitle
-    {https://venmo.com}{Venmo (PayPal)}{May 2020 - Present}
-  \resumeSubHeadingListStart
-    \jobLineItem
-      {Staff Software Engineer - Member of Technical Staff, 1 (Full-time, New York, NY)}{}
-      \resumeItemListStart
-        \resumeItem{Rewriting Venmo's Web Application}{One of two web leads working with a team of thirteen engineers in migrating the consumer web application to Next.js from two legacy codebases, including all webviews used for core flows in the mobile clients with millions of pageviews per month. Enabled new features on web including payments, business profile creation and instant transfers. Web MAUs grew by over 400\% from Dec. 2020 to Dec. 2021.}
-        \resumeItem{WCAG AA Compliance}{Led the team's a11y pillar by conducting lunch and learns on best practices, providing training resources on screen reader use and leveraging axe for partial automation across web and email codebases.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-  \employerTitle
-    {https://sesame.mit.edu}{Massachusetts Institute of Technology (MIT) Energy Initiative}{March 2020 - May 2021}
-  \resumeSubHeadingListStart
-    \jobLineItem
-      {Senior Software Engineer (Contract, Remote)}{}
-      \resumeItemListStart
-        \resumeItem{SESAME Project}{Developed a science-based web application (“Sustainable Energy System Analysis Modelling Environment") which analyzes the environmental and economic impact of low carbon energy technology systems. Built with Gatsby, Tailwind CSS and AWS cloud services, including CodeBuild triggers for ingesting large datasets.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-  \employerTitle
-    {https://breather.com}{Breather}{January 2015 - April 2020}
-  \resumeSubHeadingListStart
-    \jobLineItem
-        {Senior Front End Engineer (Full-time, New York, NY)}{January 2019 - April 2020}
-    \resumeItemListStart
-        \resumeItem{Tools for Office Customers}
-        {Led the development of an extensive suite of internal tools for managing, accessing and invoicing long-term office bookings, generating tens of millions of dollars in revenue across North America and London, UK in its first year.}
-        \resumeItem{Led the Team to Adopt Best Practices}
-        {Led the Best Practices Guild in the adoption of tools and processes to improve developer collaboration and in designing a Request For Comments (RFC) process. Developed a CI/CD process and rolled it out to the entire 20 person engineering team.}
-    \resumeItemListEnd
-    \jobLineItem
-        {Front End Engineer (Full-time, New York, NY)}{April 2017 - December 2018}
-    \resumeItemListStart
-        \resumeItem{Progressive Web App for Landlords}
-        {Architected and developed \textit{Onsite} as Breather’s first engineer in the U.S. and leader of the Real Estate Innovations pod. \textit{Onsite} is a PWA made with Preact and Flow, features security and financial reporting and integrates with building access systems used in Class A office towers in Manhattan.}
-      \resumeItemListEnd
-    \jobLineItem
-		    {Full Stack Engineer (Full-time, Montréal, Canada)}{January 2015 - March 2017}
-    \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
 \resumeSubHeadingListStart
-\resumeSubItem{\href{https://github.com/alessbell/lines}{Recurse Center}}{Attended the mini 3 batch in April 2019. Built a web app using Rust and WebAssembly that draws happy faces that follow the user's cursor using wasm-bindgen to do direct DOM manipulation from Rust. (2019)}
-\resumeSubItem{\href{https://aless.co/gatsby-wasm-plugin/}{gatsby-remark-twitter-cards}}{Built a Gatsby plugin with Rust and WebAssembly that generates Open Graph social card images at build time. It supports vector fonts and handles text layout without native dependencies. (2019)}
+\resumeSubItem{\href{https://github.com/orphic-inc/stellar-api}{Stellar}}{A strict, type-safe REST API (Express, Prisma/PostgreSQL, Zod) powering an invite-only community platform, with auto-generated OpenAPI documentation, a Tailwind-based stylesheet plugin system supporting authorship, and a community reputation score. (2022 -- Present)}
+\resumeSubItem{\href{https://github.com/obrien-k/marstronaut-federation}{marstronaut-federation}}{Built a GraphQL-backend for XKCD and NASA APIs to display Mars Rover photos and XKCD comics on a React front-end. (2021)}
+\resumeSubItem{\href{https://github.com/obrien-k/multi-sf-cart}{Multi-Product Storefront Cart}}{This is a modification for the bigcommerce/cornerstone theme to display multiple products within the same PDP. Check out my article for more info on the BigCommerce Developer Blog. (2020)}
 \vspace{5px}
 \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+
+  \employerTitle
+    {https://apollographql.com}{Apollo GraphQL}{June 2022 - March 2024}
+  \resumeSubHeadingListStart
+    \jobLineItem
+      {Senior Development Support Engineer (Full-time, Remote)}{}
+      \resumeItemListStart
+        \resumeItem{\href{https://support.apollographql.com/}{Documentation Architecture}}{Built Apollo’s Help Center support documentation from zero, resulting in over 100 public articles authored in Markdown via Git PR workflows. Developed custom Algolia integration for ZenDesk Guide to align search results with Apollo and reduce time-to-resolution. Deployed Google Cloud Serverless Function to interface publicly with secured API secrets.}
+        \resumeItem{\href{https://stackoverflow.com/users/9281567/kyle-obrien}{Open Source Contributions}}{Addressed Open Source and enterprise inquiries regarding the Apollo platform and Federated GraphQL, resulting in improved customer satisfaction and reduced support response times. Contributed code, documentation, and infrastructure to internal and external Apollo projects.}
+        \resumeItem{SDK Validation \& Technical Authoring}{Authored and validated working TypeScript and JavaScript code samples against Apollo’s released SDKs across open source and enterprise repositories. Contributed documentation, code fixes, and infrastructure improvements to internal and external Apollo projects.}
+        \resumeItem{Team Infrastructure \& Onboarding}{Developed team infrastructure documentation, processes, and software integrations to improve team efficiency and onboarding. Created User Advocacy team Code of Conduct, onboarding process, and Identity Provider workflow involving SAML configuration and enterprise SSO integration with Ping Identity.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  \employerTitle
+    {https://www.andmore.com/}{ANDMORE}{March 2021 - June 2022}
+  \resumeSubHeadingListStart
+    \jobLineItem
+      {Site Reliability Engineer (Full-time, Remote)}{}
+      \resumeItemListStart
+        \resumeItem{Training Specialist}{Subject Matter Expert for subsidiary Pharos B2B platform and integrations. Resolved on-call escalations for 18 agency suppliers as solo SRE on the Pharos platform. Onboarded enterprise merchants and developers to Pharos platform. Curated training documentation for L3 and related informational resources.}
+        \resumeItem{Customer Success Engineer}{Bridged communication between ANDMORE executive leadership, engineering, and customer success teams. Architected solutions for implementation using Pharos and sister company RepZio APIs. Managed product lifecycle working with stakeholders to develop React applications. Collaborated with RepZio to deploy Node.js services for timekeeping and employee management.}
+        \resumeItem{Data Investigation}{Queried and modified production data using MSSQL Server and MongoDB Compass, including stored procedure modifications and aggregation pipelines for data analysis and issue investigation.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  \employerTitle
+    {https://bigcommerce.com}{BigCommerce}{June 2017 - October 2020}
+  \resumeSubHeadingListStart
+    \jobLineItem
+        {Developer Community Moderator (Full-time Austin, TX + Remote)}{August 2019 - October 2020}
+    \resumeItemListStart
+        \resumeItem{\href{https://bigcommerce.github.io/dev-library/}{Cookbooks \& Tutorials}}{Published written-material with code examples for developer-focused spaces in Node.js, React, and Python. Assisted Developer Experience team with introducing Developer Library and Contribution programs, and a Developer Community Code of Conduct.}
+        \resumeItem{\href{https://medium.com/bigcommerce-developer-blog/introduction-to-vue-js-bigcommerce-b4388a2da4d2}{VueConf US 2020}}{Attended VueConf 2020 with BigCommerce’s Developer Experience team, sharing insights of BigCommerce API capabilities for headless use-cases. Demoed BigCommerce control panel, serverless front-ends, co-wrote Vue.js discovery article and code examples for Developer Blog.}
+    \resumeItemListEnd
+    \jobLineItem
+        {Senior Technical Support Specialist (Full-time, Austin, TX)}{July 2018 - August 2019}
+    \resumeItemListStart
+        \resumeItem{Process Improvement}
+        {Trained peers to effectively submit technical escalations using ELK-stack queries, trained new products, and created a tool to improve BigCommerce CLI on-boarding using Bootstrap and Node.js.}
+      \resumeItemListEnd
+    \newpage
+    \jobLineItem
+		    {Technical Support Representative (Full-time, Austin, TX)}{June 2017 - July 2018}
+        \resumeItemListStart
+        \resumeItem{\href{https://github.com/obrien-k/code-noobs-slackbot}{Code Noobs}}{Founded club to teach peers JavaScript, Node.js, and React. Met every other Saturday with visits from Engineering department. Slack group with over 50 members.}
+        \resumeItem{DNS \& Email Authentication}{Served as primary T1 contact for DNS issues and the common T2 escalation path --- record management (A, CNAME, MX, TXT), propagation troubleshooting, and SPF/DKIM/DMARC. These areas were informed by personal experience running Google Workspace and self-hosted DNS servers.}
+        \resumeItem{Control Panel \& Store Reliability}{Trained new hires on fundamentals and handled advanced merchant escalations via BigCommerce’s custom control panel, which surfaced DNS, SSL certificate management, and site security settings directly to merchants.}
+        \resumeItem{Console Ninja}{Inspected elements of web pages and researched methods for changing behavior in CSS and HTML using BigCommerce Stencil and Blueprint frameworks. Educated merchants on best practices for DNS, SSL, SEO, and utilizing scripts.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+  \employerTitle
+    {https://www.opentable.com}{OpenTable}{October 2016 - May 2017}
+  \resumeSubHeadingListStart
+    \jobLineItem
+      {Customer Support Representative (Full-time, Denver, CO)}{}
+      \resumeItemListStart
+        \resumeItem{Taking Responsibility}{Owned outreach for escalated restaurant owners needing deeper troubleshooting, and recovered abandoned, low-detail cases into solid resolutions.}
+        \resumeItem{Multitasking}{Handled email correspondence while sustaining active phone conversations and concurrent tasks.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  \employerTitle
+    {https://www.dish.com}{DISH}{October 2012 - August 2016}
+  \resumeSubHeadingListStart
+    \jobLineItem
+      {Retention Supervisor (Full-time, Denver, CO)}{October 2015 - August 2016}
+      \resumeItemListStart
+        \resumeItem{Calm under Pressure}{Communicated across written, verbal, and social channels under pressure to resolve issues and develop emerging company leaders.}
+      \resumeItemListEnd
+    \jobLineItem
+      {Team Lead (Full-time, Alvin, TX)}{March 2015 - October 2015}
+      \resumeItemListStart
+        \resumeItem{Flexibility}{Supported a super-group of 45 agents (15 new hires), stepping in to deliver performance evaluations and one-on-one feedback.}
+        \resumeItem{Efficiency Tooling}{Built a Jabber workflow tool --- adopted by the team immediately --- and trained peers on technical escalations and new-product rollouts.}
+      \resumeItemListEnd
+    \jobLineItem
+      {Customer Support Representative (Full-time, Alvin, TX)}{October 2012 - March 2015}
+      \resumeItemListStart
+        \resumeItem{Communication}{Served as POC for technical support of the management group and devised a system to convey information between 100 employees. Held response time below two minutes (averaging within 30 seconds) while continuing to provide phone support to customers.}
+        \resumeItem{Training \& Development}{Led and mentored new Representatives on proprietary technical support tools and troubleshooting.}
+        \resumeItem{Awards}{Received the ``Pride Adventure Winning'' (PAW) award during training for epitomizing company goals.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-----------Awards-----------------
 % \section{Honors and Awards}
 % \begin{description}
-% \item[] {\textbf{Above and Beyond} award for exemplifying Breather’s values of contribution and ambition (2017)}
+% \item[] {\textbf{PAW} award for exemplifying DISH's values of contribution and ambition (2017)}
 % \vspace{-2px}
 % \end{description}
 
-%-----------Presentations----------
-\section{Presentations}
-\begin{description}
-\item[] {\href{https://youtu.be/tq9MfIG-VXw?t=14526}{“Next i18n: Performant, Rich Translations in Next.js”} - JS@PayPal Worldwide Virtual Conference (2021)}
-\item[] {\href{https://www.youtube.com/watch?v=6EHbfAmA_0c}{“A QuickStart™ Guide to Making Things on the Internet”} - Google Women Techmakers Montreal (2016)}
-\end{description}
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \educationStart
-    \education
-      {Bitmaker Labs (Now Bitmaker General Assembly)}{June 2014 - August 2014}
-      {JavaScript and Ruby on Rails Bootcamp}{Toronto, Canada}
-    \education
-      {University of Toronto}{September 2009 - June 2014}
-      {Honours Bachelor of Arts in Ethics, Society \& Law}{Toronto, Canada}
-    \vspace{-4px}
-  \resumeSubHeadingListEnd
-
-
-
-%-------------------------------------------
 \end{document}
